@@ -27,8 +27,8 @@
 \faculty{Matematikos ir informatikos fakultetas}
 \department{Programų sistemų katedra}
 \papertype{Projektinis darbas}
-\title{Internetinės aplikacijos .. testavimas}
-\titleineng{Web aplication .. testing}
+\title{Internetinės parduotuvės Kilobaitas testavimas}
+\titleineng{Web shop Kilobaitas testing}
 \status{3 kurso 3 grupės studentas}
 \author{Justas Tvarijonas}
 \secondauthor{Džiugas Mažulis}    
@@ -38,27 +38,303 @@
 \begin{document}
 \maketitle
 \sectionnonum{Anotacija}
+Šiuo darbu yra siekiama sukurti testavimo planą ir atlikti testavimą www.kilobaitas.lt svetainei skirtai kompiuterinės technikos pardavimui.
+\begin{itemize}
+	\item Justas Tvarijonas - tvarijonasjustas@gmail.com
+\end{itemize}
 \tableofcontents
 \sectionnonum{Testavimo planas}
 \section{Testavimo plano identifikatoriai}
+KBT01.XX, kur XX - testo numeris.
 \section{Nuorodos}
+\begin{itemize}
+	\item http://pst.valaitis.net/PST
+	\item https://jmpovedar.files.wordpress.com/2014/03/ieee-829.pdf
+\end{itemize}
 \section{Įvadas}
+Šis testavimo planas yra skirtas internetinės parduotuvės Kilobaitas testavimui. Pagrindinis testavimo tikslas įsitikinti ar su skirtingais duomenimis internetinė svetainė veikia korektiškai. Bus testuojama prekių pridėjimas į krepšelį, prekių palyginimas, apmokėjimas. Visas testavimas bus vykdomas rankiniu būdu.
 \section{Testavimo objektas}
+www.kilobaitas.lt
 \section{Rizikos}
+\begin{itemize}
+	\item Nėra dokumentacijos.
+\end{itemize}
 \section{Funkcionalusmas, kurį testuosime}
+\begin{itemize}
+	\item Registracija.
+	\item Prekių pridėjimas į krepšelį.
+	\item Prekių palyginimas.
+	\item Mokėjimo suformulavimas. 
+	\item Prekių paieška.
+\end{itemize}
 \section{Funkcionalunas, kurio netestuosime}
+\begin{itemize}
+	\item Apmokėjimas - nėra galimybės jo imituoti, o pačiam leisti pinigų nesinori.
+	\item profilio funkcionalumas.
+\end{itemize}
 \section{Strategija}
+\begin{itemize}
+	\item Testavimui naudojamas Asus nešiojamas kompiuteris su Google Chrome interneto naršykle.
+	\item Metrikos
+	\begin{itemize}
+		\item Surastų klaidų skaičius.
+		\item Teisingų testų skaičius.
+		\item Testavimui skirtas laikas.
+	\end{itemize}
+	\item Regresiniai testai - nėra.
+	\item Testuojama pradinė konfiguracija.
+\end{itemize}
 \section{Sekmės ir nesekmės kriterijai}
+Testą laikome pasisekusiu, jeigu atlikus atitinkamą veiksmą programa pateiks tikėtą rezultatą ir nerodys klaidos pranešimų. Nepeasisekusiu laikome tokį testą, kurį atlikus gausime nenumatytą išvestį.
 \section{Testo nutraukimo kriterijai}
+Testą nutraukiame tuo atvėju, jeigu naujas atliekas testas mum daugiau informacijos suteikti nebegali, tokiu atvėju testavimą nutrauksime įvertinti savo testavimo atvejus tolimesniam testavimui.
 \section{Testų planai}
-\section{Likusios užduotys}
+Planas skirtas juodosios dežės testavimui rankiniu būdu.
 \section{Aplinkos reikalavimai}
+\begin{itemize}
+	\item Reikalinga prieeiga prie interneto ryšio.
+	\item Reikalinga naujausios versijos interneto naršyklė.
+	\item turi veikti "Kilobaitas" elektroninė parduotuvė.
+\end{itemize}
 \section{Personalas ir reikalingi apmokymai}
+Testavimas atliekamas programų sistomų studento. Reikalingi baziniai IT įgūdžiai.
 \section{Atsakomybės}
+Už visą testavimo procesą atsakingas Justas Tvarijonas.
 \section{Rizikos}
+Testavimas gali būti nesėkmingas dėl laiko stokos, dėl dokumentacijos trūkumo tentai gali būti ne pilni, nepadengti visi testavimo atvėjai.
 \sectionnonum{Testavimo atvejai}
 \section{Įvadas}
+Šioje dalyje bus pateikti Kilobaitas elektroninės parduotuvės testavimo scenarijai. Šiuo darnu siekiama įsitikinti, kad pagrindiniai svetainės funkcionalumai veikia korektiškai. Bus testuojamos šios dalys:
+\begin{enumerate}
+	\item Prekių pridėjimas į krepšelį.
+	\item Kelių prekių palyginimas.
+	\item Mokėjimo suformulavimas.
+	\item Prekių paieška.
+\end{enumerate}
 \section{Testavimo atvejai}
+\begin{center}
+	\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.00. \\ \hline
+	Testavimo atvejis &  Prekių pridėjimas į krepšelį.\\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar pridedant papildomą prekę(prekes), jos kiekis teisingai atvaizduojamas prekių krepšelyje.  \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate} 
+		\item Susirandema norimą pridėti prekę.
+		\item Įvedame 1 į prekės kiekio laukelį laukelį.
+		\item Spaudžiame "Pridėti į krepšelį".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Pridėjus naują prekę tai atsispinti krepšelyje. pagrindiniame lange matomoje krepšelio piktogramoje jame esančių prekių skaičius padidėjo 1, atsidarius krepšelį matome šią prekę.  \\ \hline
+	Gautas rezultatas & Prekė pridėta korektiškai. \\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{Prekių pridėjimas į krepšelį} 
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.01. \\ \hline
+	Testavimo atvejis & Prekės kiekio papildymas. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar papildant jau pridėtos prekės kiekį, jis pasikeičia tinkamai. \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate} 
+		\item Susirandame prekę, kurią jau turime krepšelyje.
+		\item Įvedame 1 į prekės kiekio laukelį laukelį.
+		\item Spaudžiame "Pridėti į krepšelį".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Pridėjus naują prekę tai atsispinti krepšelyje. pagrindiniame lange matomoje krepšelio piktogramoje jame esančių prekių skaičius padidėjo 1, atsidarius krepšelį matome, kad prie buvusio šios prekės kiekio pridėta 1. \\ \hline
+	Gautas Rezultatas & Prekės kiekis buvo papildytas korektiškai. \\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{Prekės kiekio papildymas.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.02. \\ \hline
+	Testavimo atvejis & Prekės pridėjimas pateikiant ne skaitinę reikšmę.\\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai apdoroja neskaitines reikšmes įvestas į kiekio laukelį. \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate} 
+		\item Susirandema norimą pridėti prekę.
+		\item Įvedame C į prekės kiekio laukelį laukelį.
+		\item Spaudžiame "Pridėti į krepšelį".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Klaidos pranešimas/nepapildytas krepšelis. \\ \hline
+	Gautas Rezultatas & Į krepšelį pridėta pasirinktos prekės 1 vienetas. \\ \hline
+	Statusas & Nepavyko. \\ \hline
+	\end{tabular}
+\captionof{table}{Prekės pridėjimas pateikiant ne skaitinę reikšmę.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.03. \\ \hline
+	Testavimo atvejis & Prekės pridėjimas pateikiant neigiamą reikšmę. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai apdoroją į prekės kiekio lauką įvedus neigiamą reikšmę. \\ \hline
+	Testavimo eiga &
+	\begin{enumerate} 
+		\item Susirandema norimą pridėti prekę.
+		\item Įvedame -5 į prekės kiekio laukelį laukelį.
+		\item Spaudžiame "Pridėti į krepšelį".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Klaidos pranešimas/nepapildytas krepšelis. \\ \hline
+	Gautas Rezultatas & Į krepšelį pridėtos -5 prekės. \\ \hline
+	Statusas & Nepavyko. \\ \hline
+	\end{tabular}
+\captionof{table}{Prekės pridėjimas pateikiant neigiamą reikšmę.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.04. \\ \hline
+	Testavimo atvejis & 3 prekių palyginimas. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainėje veikia tinkamas prekių palyginimas, lyginant nedidelį kiekį prekių. \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate} 
+		\item Susirandema norimas 3 prekes.
+		\item Prie kiekvienos spaudžiame "palyginti" varnelę.
+		\item Spudžiame mygtuką "Palyginimas".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Matome visas pasirinktas prekes su jų psecifikacijomis palyginimo lange. \\ \hline
+	Gautas Rezultatas & Prekių palyginimas tinkamai atvaizduotas. \\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{3 prekių palyginimas.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.05. \\ \hline
+	Testavimo atvejis & 1 prekės palyginimas. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai veikia prie lyginamų prekių pridėjus tik 1 prekę. \\ \hline
+	Testavimo eiga &  
+	\begin{enumerate} 
+		\item Susirandema norimą.
+		\item Spaudžiame "palyginti" varnelę.
+		\item Spudžiame mygtuką "Palyginimas".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Parodomas pranešimas, kad lyginimui reikia bent 2 prekių.  \\ \hline
+	Gautas Rezultatas & Atsidaro langas, kuriame rodoma vienintelė pasirinkta prekė. \\ \hline
+	Statusas & Nepavyko. \\ \hline
+	\end{tabular}
+\captionof{table}{1 prekės palyginimas.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.06. \\ \hline
+	Testavimo atvejis & 20 prekių palyginimas. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai atvaizduoja didelio prekių kiekio palyginimą. \\ \hline
+	Testavimo eiga &  
+	\begin{enumerate} 
+		\item Susirandema norimas 20 prekių.
+		\item Prie kiekvienos spaudžiame "palyginti" varnelę.
+		\item Spudžiame mygtuką "Palyginimas".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Prekės atvaizduojamos, bei navigacijos pagalba galima matyti jų specifikacijų skirtumus. \\ \hline
+	Gautas Rezultatas & Prekių palyginimas tinkamai atvaizduotas. \\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{20 prekių palyginimas.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.07. \\ \hline
+	Testavimo atvejis & Mokėjimo suformulavimas su teigiama suma krepšelyje. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar tinkamai suformuojama mokėjimo sąskaita, kai krepšelio vertė yra teikiamas skaičius. \\ \hline
+	Testavimo eiga &
+	\begin{enumerate} 
+		\item susirandame norimą prekę.
+		\item Į kiekio laukelį įvedame 1.
+		\item Pridedame į krepšelį.
+		\item Atsidarome krepšelį.
+		\item Spaudžiame apmokėti.
+		\item Suvedame duomenis.
+		\item Spaudžiame "Tęsti".
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Gauta apmokėjimo sąskaita su mokėjimo pasirinkimais. \\ \hline
+	Gautas Rezultatas & Gauta apmokėjimo sąskaita su mokėjimo pasirinkimais. \\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{Mokėjimo suformulavimas su teigiama suma krepšelyje.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.08. \\ \hline
+	Testavimo atvejis & Mokėjimo suformulavimas su neigiama suma krepšelyje. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai reaguoja, kai krepšelio vertė yra neigiamas skaičius. \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate}
+	\item susirandame norimą prekę.
+	\item Į kiekio laukelį įvedame -1.
+	\item Pridedame į krepšelį.
+	\item Atsidarome krepšelį.
+	\item Spaudžiame apmokėti.
+	\item Suvedame duomenis.
+	\item Spaudžiame "Tęsti".
+\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Išvestas pranešimas, kad krepšelio suma negali būti neigiama. \\ \hline
+	Gautas Rezultatas & Sistemo klaida. \\ \hline
+	Statusas & Nepavyko. \\ \hline
+	\end{tabular}
+\captionof{table}{Mokėjimo suformulavimas su neigiama suma krepšelyje.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.09. \\ \hline
+	Testavimo atvejis & Prekių paieška su gamintojo pavadinimu. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai parodo rezultatus ieškant pagal gamintojo pavadinimą.\\ \hline
+	Testavimo eiga & 
+	\begin{enumerate}
+	\item Į paieškos laukelį įvedame "Samsung".
+	\item Spaudžiame ieškoti.
+\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Prekių sąrašas, kurių gamintojas yra Samsung. \\ \hline
+	Gautas Rezultatas & prekių, kurių gamintojas Samsung sąrašas.\\ \hline
+	Statusas & Atlikta. \\ \hline
+	\end{tabular}
+\captionof{table}{Prekių paieška su gamintojo pavadinimu.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.10. \\ \hline
+	Testavimo atvejis & Paieška su tuščiu paieškos laukeliu. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė tinkamai reaguoja į tuščią paiešką. \\ \hline
+	Testavimo eiga &
+	\begin{enumerate}
+	\item Įsitikiname, kad paieškos laukelis yra tuščias.
+	\item Spaudžiame ieškoti.
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & Klaidos pranešimas, pranešantis, kad paieška negali būti atliekama neįvadus raktinių simbolių. \\ \hline
+	Gautas Rezultatas & Klaidos pranešimas, dėl to, kad paieškai reikia būti įvedus bent 3 simbolius. \\ \hline
+	Statusas & Atlikta \\ \hline
+	\end{tabular}
+\captionof{table}{Paieška su tuščiu paieškos laukeliu.}
+\vspace{1cm}
+\begin{tabular}{ |p{5cm}|p{10cm}|}
+	\hline
+	Testavimo atvejo numeris & KBT01.11 \\ \hline
+	Testavimo atvejis & Paieška į laukelį įvedant html sintaksės tekstą. \\ \hline
+	Testavimo atvejo aprašymas & Patikrinti ar svetainė neužlūžta įvedus html kodą į paieškos laukelį. \\ \hline
+	Testavimo eiga & 
+	\begin{enumerate}
+	\item Įvedame "<h1>test</h1>" į paieškos laukelį.
+	\item Spaudžiame ieškoti.
+	\end{enumerate} \\ \hline
+	Tikėtasis rezultatas & paieška su tuščių rezultatu. \\ \hline
+	Gautas Rezultatas & Systemos klaida. \\ \hline
+	Statusas & Nepavyko. \\ \hline
+	\end{tabular}
+\captionof{table}{Paieška į laukelį įvedant html sintaksės tekstą.}
+\vspace{1cm}
+\end{center}
+\newpage
 \section{Defektų aprašas}
+\begin{center}
+\begin{tabular}{ |p{1.8cm}| p{4cm} | p{7cm} | p{2cm} |}
+	\hline
+	Nr &  Funkcionalumas & Aprašymas & Sunkumas \\ \hline
+	KBT01.02 & Prekės pridėjimas pateikiant ne skaitinę reikšmę. & Bandant pridėti neskaitinę reikšmę elektroninė parduotuvė automatiškai prideda prekę su kiekiu 1. & Lengvas. \\ \hline
+	KBT01.03 & Prekės pridėjimas pateikiant neigiamą reikšmę. & Bandant pridėti neigiamą reikšmę svetainė neparodo jokio klaidos pranešimo, ir atlieką šį veikstą, taip krepšelio galututinė suma gali būti neigiama. & Vidutinis. \\ \hline
+	KBT01.05 & 1 prekės palyginimas. & Bandant palyginti 1 prekę svetainė neišveda jokio klaidos pranešimo, o atidaro naują langą su tu viena preke. & Lengvas. \\ \hline
+	KBT01.08 & Mokėjimo suformulavimas su neigiama suma krepšelyje. & Į krepšelį pridėjus neigiamą kiekį prekių ir tęsiant mokėjimą gaunama sistemo klaida. & Lengvas. \\ \hline
+	KBT01.11 & Paieška į laukelį įvedant html sintaksės tekstą. & Bet koks HTML sintakse įvestas tekstas į paieškos laukelį parodo sistemos klaidą. & Lengvas. \\ \hline
+\end{tabular}
+\end{center}
 \section{Išvada}
 \end{document}

@@ -30,8 +30,7 @@
 \title{Internetinės parduotuvės Kilobaitas testavimas}
 \titleineng{Web shop Kilobaitas testing}
 \status{3 kurso 3 grupės studentas}
-\author{Justas Tvarijonas}
-\secondauthor{Džiugas Mažulis}    
+\author{Justas Tvarijonas}  
 \supervisor{Vytautas Valaitis, Asist., Dr.}
 \date{Vilnius – \the\year}
 
@@ -46,31 +45,33 @@
 \sectionnonum{Testavimo planas}
 \section{Testavimo plano identifikatoriai}
 KBT01.XX, kur XX - testo numeris.
+\vspace{1cm}
 \section{Nuorodos}
 \begin{itemize}
 	\item http://pst.valaitis.net/PST
 	\item https://jmpovedar.files.wordpress.com/2014/03/ieee-829.pdf
 \end{itemize}
+\vspace{1cm}
 \section{Įvadas}
 Šis testavimo planas yra skirtas internetinės parduotuvės Kilobaitas testavimui. Pagrindinis testavimo tikslas įsitikinti ar su skirtingais duomenimis internetinė svetainė veikia korektiškai. Bus testuojama prekių pridėjimas į krepšelį, prekių palyginimas, apmokėjimas. Visas testavimas bus vykdomas rankiniu būdu.
+\vspace{1cm}
 \section{Testavimo objektas}
 www.kilobaitas.lt
-\section{Rizikos}
-\begin{itemize}
-	\item Nėra dokumentacijos.
-\end{itemize}
-\section{Funkcionalusmas, kurį testuosime}
+\vspace{1cm}
+\section{Funkcionalumas, kurį testuosime}
 \begin{itemize}
 	\item Prekių pridėjimas į krepšelį.
 	\item Prekių palyginimas.
 	\item Mokėjimo suformulavimas. 
 	\item Prekių paieška.
 \end{itemize}
-\section{Funkcionalunas, kurio netestuosime}
+\vspace{1cm}
+\section{Funkcionalumas, kurio netestuosime}
 \begin{itemize}
 	\item Apmokėjimas - nėra galimybės jo imituoti, o pačiam leisti pinigų nesinori.
 	\item Profilio funkcionalumas.
 \end{itemize}
+\vspace{1cm}
 \section{Strategija}
 \begin{itemize}
 	\item Testavimui naudojamas Asus nešiojamas kompiuteris su Google Chrome interneto naršykle.
@@ -82,25 +83,85 @@ www.kilobaitas.lt
 	\end{itemize}
 	\item Regresiniai testai - nėra.
 	\item Testuojama pradinė konfiguracija.
+	\item Specialūs įrankiai - nėra.
+	\item Apmokymas naudotis įrankiais - nėra.
 \end{itemize}
+\vspace{1cm}
 \section{Sekmės ir nesekmės kriterijai}
 Testą laikome pasisekusiu, jeigu atlikus atitinkamą veiksmą programa pateiks tikėtą rezultatą ir nerodys klaidos pranešimų. Nepeasisekusiu laikome tokį testą, kurį atlikus gausime nenumatytą išvestį.
-\section{Testo nutraukimo kriterijai}
-Testą nutraukiame tuo atvėju, jeigu naujas atliekas testas mum daugiau informacijos suteikti nebegali, tokiu atvėju testavimą nutrauksime įvertinti savo testavimo atvejus tolimesniam testavimui.
-\section{Testų planai}
-Planas skirtas juodosios dežės testavimui rankiniu būdu.
+\vspace{1cm}
+\section{Testo nutraukimo ar sustabdymo kriterijai}
+\begin{itemize}
+	\item Testą nutraukiame tuo atvėju, jeigu naujas atliekas testas mum daugiau informacijos suteikti nebegali, tokiu atvėju testavimą nutrauksime įvertinti savo testavimo atvejus tolimesniam testavimui.
+	\item Jeigu svetainės palaikytojas nutraukia savo veiklą, lauksime, kol internetinė parduotuvė vėl bus paleista.
+\end{itemize}
+
+\vspace{1cm}
+\section{Testų rezultatai}
+\begin{itemize}
+	\item Testų planas.
+	\item Testų scenarijai.
+	\item Klaidų sąrašas.
+	\item Metrikos.
+	\item Testavimo strategija.
+	\item Testavimo išvada.
+\end{itemize}
+\vspace{1cm}
+\section{Likusios užduotys}
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Užduotis & Vykdytojas & Būsena \\ \hline
+ Sukurti testavimo planą. & Justas Tvarijonas. & Pabaigta \\ \hline
+ Prekių pridėjimas į krepšelį.  & Justas Tvarijonas. & Pabaigta. \\ \hline
+ Kelių prekių palyginimas. & Justas Tvarijonas. & Pabaigta. \\ \hline
+ Mokėjimo suformulavimas & Justas Tvarijonas. & Pabaigta. \\ \hline
+ Prekių paieška. & Justas Tvarijonas. & Pabaigta. \\ \hline
+\end{tabular}
+\end{center}
+\vspace{1cm}
 \section{Aplinkos reikalavimai}
 \begin{itemize}
 	\item Reikalinga prieeiga prie interneto ryšio.
 	\item Reikalinga naujausios versijos interneto naršyklė.
 	\item Turi veikti "Kilobaitas" elektroninė parduotuvė.
 \end{itemize}
+\vspace{1cm}
 \section{Personalas ir reikalingi apmokymai}
-Testavimas atliekamas programų sistomų studento. Reikalingi baziniai IT įgūdžiai.
+Šiam testavimui reikėtų bent 1 pilnu etatu dirbančio testavimo profesionalo, kuris labiau įsigilinęs ir svetainės veikimą galėtų pastebėti daugiau trūkumų(atliktų ad hoc testavimą). Toks testuotojas sistemą ištestuotų per savaitę laiko, tačiau, dėl resursų trūkumo testavimas bus atliekamas programų sistomų studento.
+\vspace{1cm}
 \section{Atsakomybės}
-Už visą testavimo procesą atsakingas Justas Tvarijonas.
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ Atsakomybė & Justas Tvarijonas \\ \hline
+ Rankinių testų kūrimas. & X \\ \hline
+ Rankinių testų vykdymas. & X \\ \hline
+ Testavimo plano sudarymas. & X \\ \hline
+\end{tabular}
+\end{center}
+\vspace{1cm}
+\section{Tvarkaraštis}
+Testavimo plano ir testavimo atvejų sudarymas ir testų atlikimas bus įvykdytas per 1-2 dienas.\newline
+
+Darbas bus atliekamas tokiais žingsniais:
+\begin{enumerate}
+	\item{Testavimo plano sudarymas.}
+	\item{Testavimo atvejų dokumento sudarymas.}
+	\item{Testavimo atvejų sudarymas.}
+	\item{Testų vykdymas.}
+	\item{Rezultatų ir išvadų sudarymas.}
+\end{enumerate}
+\vspace{1cm}
 \section{Rizikos}
-Testavimas gali būti nesėkmingas dėl laiko stokos, dėl dokumentacijos trūkumo tentai gali būti ne pilni, nepadengti visi testavimo atvėjai.
+\begin{itemize}
+	\item Testavimas gali būti nesėkmingas dėl laiko stokos.
+	\item Dėl dokemtacijos trūkumo testai gali būti ne pilni, gali būti nepadengti visi testavimo atvėjai.
+	\item Dėl žmonių trūkumo gali būti nepadengti visi atvėjai.
+	\item Dėl programinės įrangos trūkumo gali būti nepadengti sudėtingesni use cases.
+	\item 
+\end{itemize}
 \sectionnonum{Testavimo atvejai}
 \section{Įvadas}
 Šioje dalyje bus pateikti Kilobaitas elektroninės parduotuvės testavimo scenarijai. Šiuo darnu siekiama įsitikinti, kad pagrindiniai svetainės funkcionalumai veikia korektiškai. Bus testuojamos šios dalys:
